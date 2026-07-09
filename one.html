@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI.Chat</title>
+    <link rel="stylesheet" href="one.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="title">
+                <h2>Copilot</h2>
+                <div class="crossbtn"><h1>X</h1></div>
+            </div>
+            <div class="add-chat">
+                <div id="chatbtn">
+                    <p>New Chat</p>
+                </div>
+            </div>
+            <hr>
+            <div class="chat-counter">
+            </div>
+
+        </div>
+        <div class="right">
+            <div id="top-right">
+                <div  id="secbtnx">
+                    <img id="logo" class="crossbtn" src="copilot logo.png">
+                </div>
+                <div id="dummy">
+                </div>
+                <div id="top-heading"></div>
+                <div></div>
+            </div>
+            <div id="bottom-right">
+                <div id="placeholder-logo">
+                    <img id="placeholder-img" src="copilot logo.png" alt="copilot logo">
+                </div>
+
+
+                <div id="chat-box">
+                    <div id="chat-section">
+                        
+                    </div>
+                    <div id="enter-section">
+                        <div id="enterbox">
+                            <input id="chat-container" placeholder="message Copilot" type="text">
+                            <button id="chat-submit">-></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div id="pop-box-bg">
+            <div id="pop-box">
+                <h3 id="pop-title">Create New Chat</h3>
+                <div id="input-wrapper">
+                        <input id="chat-name" placeholder="enter new chat" type="text" name="chatName">
+                        <button id="name-btn">-></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="keybox-bg">
+            <div id="key-box">
+                <h3 id="key-title">Insert Gemini API Key</h3>
+                <h6 id="key-error">Ensure to put only free temporary API keys for demo purposes only</h6>
+                <div id="key-wrapper">
+                        <input id="key-name" placeholder="insert Key" type="text" name="keyName">
+                        <button id="key-btn">-></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="one.js"></script>
+</body>
+</html>

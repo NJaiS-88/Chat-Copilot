@@ -1,0 +1,373 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;   /* hides scrollbar visuals */
+}
+
+/* Internet Explorer / old Edge */
+body {
+  -ms-overflow-style: none; 
+}
+
+.container{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.left{
+    width: 25vw;
+    background-color: #efeae7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index:10;
+    min-width: 200px;
+}
+.right{
+    width: 75vw;
+    position: absolute;
+    right:0;
+    height: 100vh;
+}
+.title{
+    height: 8%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top:10px;
+}
+.add-chat{
+    height: 5%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.crossbtn{
+    margin-right: 30px;
+    font-size: 10px;
+}
+.crossbtn:hover{
+    cursor:pointer;
+    color: rgba(0, 0, 0, 0.486);
+}
+.chat-counter{
+    overflow-y:auto;
+    flex-grow: 1;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+}
+#chatbtn{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom:10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 0.5vw;
+}
+#chatbtn:hover{
+    background-color: #ded9d6;
+    cursor: pointer;
+}
+#secbtnx{
+    display: none;
+    margin-left: 10px;
+
+}
+.chathist{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom:1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 0.5vw;
+}
+.chathist:hover{
+    background-color: #994a1c;
+    cursor: pointer;
+}
+
+#top-right{
+    background-color: #efeae7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    width: 20px;
+}
+
+#pop-box-bg{
+    background-color: rgba(0, 0, 0, 0.297);
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+    width: 100%;
+    height: 100%;
+}
+
+#pop-box{
+    background-color: #f8f4f1;
+    width: 30%;
+    height: 30%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; 
+}
+@media (max-width: 768px) {
+    #pop-box{
+        width: 80%;
+    }
+}
+@media (min-width: 769px) and  (max-width: 1200px){
+    #pop-box{
+        width: 50%;
+    }
+}
+
+#chat-name{
+    font-size: large;
+    border-radius: 20px;
+    border: solid;
+    border-color: #ded9d6;
+    border-width: 2px;
+    padding-left: 10px;
+    height: 40%;
+}
+
+#pop-title{
+    margin-top: 30px;
+}
+
+#input-wrapper{
+    height: 40%;
+    position: relative;
+    margin-top:10%;
+}
+
+#name-btn{
+    background-color: #efeae7;
+    border: solid;
+    padding: 2px;
+    border-color: #ee570000;
+    border-radius: 50%;
+    position: absolute;
+    top:2%;
+    right:1%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#placeholder-img{
+    width: 30%;
+}
+
+
+#bottom-right{
+    height: 95%;
+    background-color: #f8f4f1;
+    position: relative;
+}
+#placeholder-logo{
+    width:100%;
+    height:100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#placeholder-img{
+    opacity:0.05;
+}
+
+#chat-box{
+    width:100%;
+    height:100%;
+    position: absolute;
+    display: none;
+}
+
+#enter-section{
+    position: relative;
+    height: 30%;
+    background-color: #f8f4f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+#enterbox{
+    width: 50%;
+    position: absolute;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat-container{
+    width: 70%;
+    height: 50%;
+    position: relative;
+    border-radius: 20px;
+    border: 5px solid #fff3e9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#chat-submit{
+    position: relative;
+    left: -10%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #enterbox{
+        width: 100%;
+    }
+    #chat-container{
+        width:100%;
+    }
+}
+@media (min-width: 769px) and  (max-width: 1200px){
+    #enterbox{
+        width: 90%;
+    }
+    #chat-container{
+        width: 90%;
+    }
+}
+
+
+#chat-section{
+    position: relative;
+    height:70%;
+    overflow-y: auto;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    display: flex;
+    flex-direction: column;
+    padding-top:20px;
+}
+
+.chat-sender{
+    background-color: #e4dfdc;
+    padding:5px;
+    align-self: flex-end;
+    margin-left: 40px;
+    width: fit-content;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.chat-receiver{
+    padding:5px;
+    margin-right: 40px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+
+#keybox-bg{
+    background-color: rgba(0, 0, 0, 0.297);
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+    width: 100%;
+    height: 100%;
+}
+
+#key-box{
+    background-color: #f8f4f1;
+    width: 30%;
+    height: 30%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; 
+}
+@media (max-width: 768px) {
+    #key-box{
+        width: 80%;
+    }
+}
+@media (min-width: 769px) and  (max-width: 1200px){
+    #key-box{
+        width: 50%;
+    }
+}
+
+#key-name{
+    font-size: large;
+    border-radius: 20px;
+    border: solid;
+    border-color: #ded9d6;
+    border-width: 2px;
+    padding-left: 10px;
+    height: 40%;
+}
+
+#key-title{
+    margin-top: 30px;
+}
+
+#key-wrapper{
+    height: 40%;
+    position: relative;
+    margin-top:10%;
+}
+
+#key-btn{
+    background-color: #efeae7;
+    border: solid;
+    padding: 2px;
+    border-color: #ee570000;
+    border-radius: 50%;
+    position: absolute;
+    top:2%;
+    right:1%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
